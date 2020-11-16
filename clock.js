@@ -9,7 +9,7 @@ function setClock() {
     const currentDate = new Date()
     const secondsRatio = currentDate.getSeconds() / 60
     const minutesRatio = (secondsRatio + currentDate.getMinutes())/ 60
-    const hoursRatio = currentDate.getHours() / 12
+    const hoursRatio = (minutesRadio + currentDate.getHours() / 12
     setRotation(secondHand, secondsRatio)
     setRotation(minuteHand, minutesRatio)
     setRotation(hourHand, hoursRatio)
@@ -17,7 +17,7 @@ function setClock() {
 }
 
 
-function setRotation(element, rotationRadio){
+function setRotation(element, rotationRatio){
     element.style.setProperty('--rotation', rotationRadio * 360)
 }
 
